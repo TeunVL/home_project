@@ -1,4 +1,4 @@
-//--temp_sensor--
+//--temp_sensor--         Source: http://arduinolearning.com/code/am2301-example.php
 #include "DHT.h"
 #include <LiquidCrystal.h>
 #define DHTPIN 7
@@ -8,7 +8,7 @@ DHT dht(DHTPIN, DHTTYPE);
 int h = 0;
 int t = 0;
 
-//--IR_remote--
+//--IR_remote--             Source: http://www.instructables.com/id/Arduino-Infrared-Remote-tutorial/?ALLSTEPS
 #include <IRremote.h>
 #include <IRremoteInt.h>
 int RECV_PIN = 0;
@@ -39,6 +39,12 @@ String IR[]= {"ffa25d", //Power
               "ff52ad"}; //9
 
 int sensor_on = 100;
+
+//--distance_sensor--         Source: http://www.instructables.com/id/Ultrasonic-Range-detector-using-Arduino-and-the-SR/?ALLSTEPS
+#include <NewPing.h>
+
+
+//--sound_sensor--            Source: https://tkkrlab.nl/wiki/Arduino_KY-038_Microphone_sound_sensor_module
 
 void setup() {
   Serial.begin(9600);
